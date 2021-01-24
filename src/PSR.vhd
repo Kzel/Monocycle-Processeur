@@ -1,0 +1,34 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+Entity PSR is   --Processor State Registre
+port(  
+  DataIn: in std_logic_vector(31 downto 0);     --bus de chargement
+  RST: in std_logic;        --reset asynchrone, actif a l'etat haut
+  CLK: in std_logic;
+  WE: in std_logic;         -- commande de chargement   
+  DataOut: out std_logic_vector(31 downto 0)    --bus de sortie
+  );
+end entity;
+
+Architecture rtl of PSR is
+  signal Y: std_logic_vector(31 downto 0);
+  
+begin
+  
+process(RST,CLK)
+begin  
+  if (RST='1') then
+    Y <= (others => '0');   --initialisation
+  elsif rising_edge(CLK) then
+    if ( WE='1') then
+      Y <= DataIn;
+    end if;
+  end if;
+end process;
+
+DataOut <= Y; 
+  
+end Architecture;
+     

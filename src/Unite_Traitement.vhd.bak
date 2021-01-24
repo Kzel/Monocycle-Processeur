@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+Entity Unite_Traitement is
+port( 	
+    Reset,Clk,WE: in std_logic;
+   	OP:in std_logic_vector(1 downto 0);
+	  RW,RA,RB: in std_logic_vector(3 downto 0);
+	  S: inout std_logic_vector(31 downto 0));
+end entity;
+
+Architecture rtl of Unite_Traitement is
+	signal busA,busB: std_logic_vector(31 downto 0);
+	signal N:std_logic;
+
+begin
+
+G1: entity work.Banc_Registre port map(CLK=>Clk ,W=>S ,RA=>RA ,RB=>RB ,Rw=>RW ,WE=>WE ,A=>busA ,B=>busB);
+G2: entity work.ALU port map(OP=>OP ,A=>busA ,B=>busB ,S=>S ,N=>N);
+
+end Architecture;

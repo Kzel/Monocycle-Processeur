@@ -1,0 +1,61 @@
+# Current time Fri Mar 13 14:46:09 2020
+# ModelSim Stack Trace
+# Program = vish
+# Id = "6.5b"
+# Version = "2009.10"
+# Date = "Oct  1 2009"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 10046a2c. Traceback:
+# 0    0x10046a2c: 'TclListObjSetElement + 0xbc'
+# 1    0x1005f664: 'TclDeleteCompiledLocalVars + 0xf4'
+# 2    0x100489a6: 'Tcl_PopCallFrame + 0x46'
+# 3    0x04999e92: 'Itcl_PopContext + 0x52'
+# 4    0x064c6d68: '<unknown (@0x64c6d68)>'
+StackWalk failed 126
+# End of Stack Trace
+
+# Current time Fri Mar 13 16:45:27 2020
+# ModelSim Stack Trace
+# Program = vish
+# Id = "6.5b"
+# Version = "2009.10"
+# Date = "Oct  1 2009"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 0050002a. Traceback:
+# End of Stack Trace
+
+# Current time Fri Mar 13 16:45:27 2020
+# ModelSim Stack Trace
+# Program = vish
+# Id = "6.5b"
+# Version = "2009.10"
+# Date = "Oct  1 2009"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 0050002a. Traceback:
+# End of Stack Trace
+
+# Current time Fri Mar 13 16:45:27 2020
+# ModelSim Stack Trace
+# Program = vish
+# Id = "6.5b"
+# Version = "2009.10"
+# Date = "Oct  1 2009"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 0050002a. Traceback:
+# End of Stack Trace
+
+# Current time Fri Mar 13 16:45:27 2020
+# ModelSim Stack Trace
+# Program = vish
+# Id = "6.5b"
+# Version = "2009.10"
+# Date = "Oct  1 2009"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 0050002a. Traceback:
+# End of Stack Trace
+

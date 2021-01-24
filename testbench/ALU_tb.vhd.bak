@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+--test bench pour Unité arithmétique logique
+Entity ALU_tb is    
+end entity;
+
+Architecture testbench of ALU_tb is
+  signal OP: std_logic_vector(1 downto 0);
+  signal A,B: std_logic_vector(31 downto 0);
+  signal S: std_logic_vector(31 downto 0);
+	signal N: std_logic;
+  
+begin
+  
+simulate:process
+begin
+  A <= Std_logic_vector(To_signed(10,32));
+  B <= Std_logic_vector(To_signed(100,32));
+  OP <= "00";
+  wait for 5 ns;
+  OP <= "01";
+  wait for 5 ns;
+  OP <= "10";
+  wait for 5 ns;
+  OP <= "11";
+  wait for 5 ns;
+  wait;
+  
+end process;
+
+UUT: entity work.ALU port map(OP=>OP ,A=>A ,B=>B ,S=>S, N=>N);
+end architecture;
+    
